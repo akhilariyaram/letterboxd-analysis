@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Your Letterboxd Export</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    .upload-container {
+      max-width: 500px;
+      margin: 5rem auto;
+      background-color: #1c1c1c;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .upload-container h1 {
+      margin-bottom: 1.5rem;
+      color: #66cc33;
+    }
+
+    .upload-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .upload-note {
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-container">
+    <h1>🎬 Upload Your Letterboxd Export</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="zipfile" accept=".zip" required>
+      <button type="submit">Upload & View Dashboard</button>
+    </form>
+    <p class="upload-note">Export your Letterboxd data as a ZIP and upload it here.</p>
+  </div>
+</body>
+</html>
